@@ -1,0 +1,468 @@
+<?xml version="1.0" ?>
+<robot name="forGazebo" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find forGazebo_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find forGazebo_description)/urdf/forGazebo.trans" />
+<xacro:include filename="$(find forGazebo_description)/urdf/forGazebo.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="3.9676701090757524e-15 -0.012514724371721552 4.408544257011415e-18"/>
+    <mass value="0.9692079654958036"/>
+    <inertia ixx="0.000303" ixy="0.0" ixz="-0.0" iyy="0.004383" iyz="0.0" izz="0.004375"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://forGazebo_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://forGazebo_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="shoulder_3_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-2.5396351688300456e-14 -0.003433175878317425 -0.014597415424978458"/>
+    <mass value="0.07029810724631343"/>
+    <inertia ixx="9e-06" ixy="-0.0" ixz="-0.0" iyy="7e-06" iyz="-2e-06" izz="7e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.0825 0.0064 0.0235"/>
+    <geometry>
+      <mesh filename="package://forGazebo_description/meshes/shoulder_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.0825 0.0064 0.0235"/>
+    <geometry>
+      <mesh filename="package://forGazebo_description/meshes/shoulder_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="shoulder_4_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="2.348121697082206e-14 -0.0034331758783174285 0.014597415424978596"/>
+    <mass value="0.07029810724631425"/>
+    <inertia ixx="9e-06" ixy="0.0" ixz="-0.0" iyy="7e-06" iyz="2e-06" izz="7e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.0825 0.0064 -0.0235"/>
+    <geometry>
+      <mesh filename="package://forGazebo_description/meshes/shoulder_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.0825 0.0064 -0.0235"/>
+    <geometry>
+      <mesh filename="package://forGazebo_description/meshes/shoulder_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="shoulder_1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-2.363387263670802e-14 -0.003433175878317876 -0.014597415424978506"/>
+    <mass value="0.07029810724631347"/>
+    <inertia ixx="9e-06" ixy="-0.0" ixz="-0.0" iyy="7e-06" iyz="-2e-06" izz="7e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0825 0.0064 0.0235"/>
+    <geometry>
+      <mesh filename="package://forGazebo_description/meshes/shoulder_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0825 0.0064 0.0235"/>
+    <geometry>
+      <mesh filename="package://forGazebo_description/meshes/shoulder_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="shoulder_2_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="2.55351295663786e-14 -0.0034331758783178673 0.014597415424978562"/>
+    <mass value="0.07029810724631419"/>
+    <inertia ixx="9e-06" ixy="0.0" ixz="-0.0" iyy="7e-06" iyz="2e-06" izz="7e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0825 0.0064 -0.0235"/>
+    <geometry>
+      <mesh filename="package://forGazebo_description/meshes/shoulder_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0825 0.0064 -0.0235"/>
+    <geometry>
+      <mesh filename="package://forGazebo_description/meshes/shoulder_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="forearm_2_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.08186802896056344 -0.056734000000000034 0.028456407310489408"/>
+    <mass value="0.043654651188966595"/>
+    <inertia ixx="1e-06" ixy="0.0" ixz="-0.0" iyy="1.9e-05" iyz="0.0" izz="1.9e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.143 -0.031234 -0.014813"/>
+    <geometry>
+      <mesh filename="package://forGazebo_description/meshes/forearm_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.143 -0.031234 -0.014813"/>
+    <geometry>
+      <mesh filename="package://forGazebo_description/meshes/forearm_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="forearm_4_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.050868028960561265 0.025499999999999582 0.029669407310489317"/>
+    <mass value="0.043654651188966595"/>
+    <inertia ixx="1e-06" ixy="0.0" ixz="0.0" iyy="1.9e-05" iyz="0.0" izz="1.9e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.112 0.051 -0.0136"/>
+    <geometry>
+      <mesh filename="package://forGazebo_description/meshes/forearm_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.112 0.051 -0.0136"/>
+    <geometry>
+      <mesh filename="package://forGazebo_description/meshes/forearm_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="forearm_1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.04886802896072601 0.025499999999999474 -0.019669407310489394"/>
+    <mass value="0.04365465118896718"/>
+    <inertia ixx="1e-06" ixy="0.0" ixz="-0.0" iyy="1.9e-05" iyz="0.0" izz="1.9e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.11 0.051 0.0236"/>
+    <geometry>
+      <mesh filename="package://forGazebo_description/meshes/forearm_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.11 0.051 0.0236"/>
+    <geometry>
+      <mesh filename="package://forGazebo_description/meshes/forearm_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="forearm_3_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.023868028960723722 0.025499999999999953 -0.029669407310489337"/>
+    <mass value="0.04365465118896719"/>
+    <inertia ixx="1e-06" ixy="0.0" ixz="0.0" iyy="1.9e-05" iyz="0.0" izz="1.9e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.085 0.051 0.0136"/>
+    <geometry>
+      <mesh filename="package://forGazebo_description/meshes/forearm_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.085 0.051 0.0136"/>
+    <geometry>
+      <mesh filename="package://forGazebo_description/meshes/forearm_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg_1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.032821443648029636 0.003646943770378358 -0.09248769431431515"/>
+    <mass value="0.050460520498688245"/>
+    <inertia ixx="9e-06" ixy="1e-05" ixz="-0.0" iyy="1.6e-05" iyz="0.0" izz="2.4e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.017758 0.051 -0.04771"/>
+    <geometry>
+      <mesh filename="package://forGazebo_description/meshes/leg_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.017758 0.051 -0.04771"/>
+    <geometry>
+      <mesh filename="package://forGazebo_description/meshes/leg_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg_3_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.04342644364803199 0.018224943770378844 -0.0952006943143151"/>
+    <mass value="0.05046052049868823"/>
+    <inertia ixx="9e-06" ixy="-1e-05" ixz="0.0" iyy="1.6e-05" iyz="0.0" izz="2.4e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.007153 0.065578 -0.050423"/>
+    <geometry>
+      <mesh filename="package://forGazebo_description/meshes/leg_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.007153 0.065578 -0.050423"/>
+    <geometry>
+      <mesh filename="package://forGazebo_description/meshes/leg_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg_4_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0434205563519703 0.061785943770378784 0.10352169431431521"/>
+    <mass value="0.05046052049868819"/>
+    <inertia ixx="9e-06" ixy="-1e-05" ixz="-0.0" iyy="1.6e-05" iyz="-0.0" izz="2.4e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.094 0.109139 0.058744"/>
+    <geometry>
+      <mesh filename="package://forGazebo_description/meshes/leg_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.094 0.109139 0.058744"/>
+    <geometry>
+      <mesh filename="package://forGazebo_description/meshes/leg_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg_2_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.023579443648031866 0.03744094377037838 0.09519169431431512"/>
+    <mass value="0.050460520498688245"/>
+    <inertia ixx="9e-06" ixy="1e-05" ixz="0.0" iyy="1.6e-05" iyz="-0.0" izz="2.4e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.027 0.084794 0.050414"/>
+    <geometry>
+      <mesh filename="package://forGazebo_description/meshes/leg_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.027 0.084794 0.050414"/>
+    <geometry>
+      <mesh filename="package://forGazebo_description/meshes/leg_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="cover_4_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.020450807608523275 -6.938893903907228e-17 0.00033490158844180773"/>
+    <mass value="0.03927176365369435"/>
+    <inertia ixx="1e-06" ixy="0.0" ixz="-0.0" iyy="1.2e-05" iyz="0.0" izz="1.4e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.0825 0.0255 -0.05105"/>
+    <geometry>
+      <mesh filename="package://forGazebo_description/meshes/cover_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.0825 0.0255 -0.05105"/>
+    <geometry>
+      <mesh filename="package://forGazebo_description/meshes/cover_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="cover_3_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.020450807608521054 -6.245004513516506e-17 -0.0003349015884417522"/>
+    <mass value="0.03927176365369435"/>
+    <inertia ixx="1e-06" ixy="0.0" ixz="0.0" iyy="1.2e-05" iyz="0.0" izz="1.4e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.0825 0.0255 0.05105"/>
+    <geometry>
+      <mesh filename="package://forGazebo_description/meshes/cover_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.0825 0.0255 0.05105"/>
+    <geometry>
+      <mesh filename="package://forGazebo_description/meshes/cover_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="cover_1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.020450807608521145 -4.926614671774132e-16 0.0003349015884417522"/>
+    <mass value="0.03927176365369435"/>
+    <inertia ixx="1e-06" ixy="0.0" ixz="0.0" iyy="1.2e-05" iyz="-0.0" izz="1.4e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0825 0.0255 -0.05105"/>
+    <geometry>
+      <mesh filename="package://forGazebo_description/meshes/cover_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0825 0.0255 -0.05105"/>
+    <geometry>
+      <mesh filename="package://forGazebo_description/meshes/cover_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="cover_2_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.0204508076085234 -4.822531263215524e-16 -0.00033490158844175916"/>
+    <mass value="0.03927176365369435"/>
+    <inertia ixx="1e-06" ixy="0.0" ixz="-0.0" iyy="1.2e-05" iyz="-0.0" izz="1.4e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0825 0.0255 0.05105"/>
+    <geometry>
+      <mesh filename="package://forGazebo_description/meshes/cover_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0825 0.0255 0.05105"/>
+    <geometry>
+      <mesh filename="package://forGazebo_description/meshes/cover_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rigid1" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.0825 -0.0064 -0.0235"/>
+  <parent link="base_link"/>
+  <child link="shoulder_3_1"/>
+</joint>
+
+<joint name="Rigid2" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.0825 -0.0064 0.0235"/>
+  <parent link="base_link"/>
+  <child link="shoulder_4_1"/>
+</joint>
+
+<joint name="Rigid3" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0825 -0.0064 -0.0235"/>
+  <parent link="base_link"/>
+  <child link="shoulder_1_1"/>
+</joint>
+
+<joint name="Rigid4" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0825 -0.0064 0.0235"/>
+  <parent link="base_link"/>
+  <child link="shoulder_2_1"/>
+</joint>
+
+<joint name="Rev5" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.0605 0.037634 -0.008687"/>
+  <parent link="shoulder_4_1"/>
+  <child link="forearm_2_1"/>
+  <axis xyz="-0.0 0.0 1.0"/>
+</joint>
+
+<joint name="Rev6" type="continuous">
+  <origin rpy="0 0 0" xyz="0.0295 -0.0446 -0.0099"/>
+  <parent link="shoulder_2_1"/>
+  <child link="forearm_4_1"/>
+  <axis xyz="-0.0 0.0 1.0"/>
+</joint>
+
+<joint name="Rev7" type="continuous">
+  <origin rpy="0 0 0" xyz="0.0275 -0.0446 -0.0001"/>
+  <parent link="shoulder_1_1"/>
+  <child link="forearm_1_1"/>
+  <axis xyz="0.0 -0.0 -1.0"/>
+</joint>
+
+<joint name="Rev8" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.0025 -0.0446 0.0099"/>
+  <parent link="shoulder_3_1"/>
+  <child link="forearm_3_1"/>
+  <axis xyz="0.0 -0.0 -1.0"/>
+</joint>
+
+<joint name="Rev9" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.092242 0.0 0.07131"/>
+  <parent link="forearm_1_1"/>
+  <child link="leg_1_1"/>
+  <axis xyz="-0.0 0.0 1.0"/>
+</joint>
+
+<joint name="Rev10" type="continuous">
+  <origin rpy="0 0 0" xyz="0.077847 -0.014578 0.064023"/>
+  <parent link="forearm_3_1"/>
+  <child link="leg_3_1"/>
+  <axis xyz="0.0 0.0 1.0"/>
+</joint>
+
+<joint name="Rev11" type="continuous">
+  <origin rpy="0 0 0" xyz="0.049 -0.140373 -0.073557"/>
+  <parent link="forearm_2_1"/>
+  <child link="leg_4_1"/>
+  <axis xyz="-0.0 -0.0 -1.0"/>
+</joint>
+
+<joint name="Rev12" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.085 -0.033794 -0.064014"/>
+  <parent link="forearm_4_1"/>
+  <child link="leg_2_1"/>
+  <axis xyz="0.0 -0.0 -1.0"/>
+</joint>
+
+<joint name="Rigid13" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0605 -0.056734 0.036237"/>
+  <parent link="forearm_2_1"/>
+  <child link="cover_4_1"/>
+</joint>
+
+<joint name="Rigid14" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0025 0.0255 -0.03745"/>
+  <parent link="forearm_3_1"/>
+  <child link="cover_3_1"/>
+</joint>
+
+<joint name="Rigid15" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.0295 0.0255 0.03745"/>
+  <parent link="forearm_4_1"/>
+  <child link="cover_1_1"/>
+</joint>
+
+<joint name="Rigid16" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.0275 0.0255 -0.02745"/>
+  <parent link="forearm_1_1"/>
+  <child link="cover_2_1"/>
+</joint>
+
+</robot>
